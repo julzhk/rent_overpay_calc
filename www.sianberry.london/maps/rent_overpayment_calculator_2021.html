@@ -66,9 +66,6 @@
 <div id="NEW-footer"></div>
 
 
-
-
-
 <div id="header"><h1>How much have you overpaid your rent?</h1></div>
 <div id="left">
     <form name="myform" action="" method="GET" class="form-wrapper">
@@ -84,13 +81,18 @@
                 <div id="slide-1">
                     <h2>Like paying rent in London?</h2>
                     <h3>Let's see how much you are over-paying!</h3>
+                    <p> swipe right to start!</p>
                 </div>
                 <div id="slide-2">
                     <div id="rent-calc-form">
                         <h4>Enter the year you moved to London and your current rent (data starts at 2011)</h4>
                         <p>
                             <label for="years">Choose the year you moved to London:</label>
-                            <select name="years" id="years" tabindex="0">
+                            <select name="years" id="years" tabindex="0"
+                            onclick="testSelect(this.form)"
+                            onmouseup="testSelect(this.form)"
+                            onblur="testSelect(this.form)"
+                            >
                                 <option value="2">2012</option>
                                 <option value="3">2013</option>
                                 <option value="4">2014</option>
@@ -100,7 +102,7 @@
                                 <option value="8">2018</option>
                                 <option value="9">2019</option>
                                 <option value="10">2020</option>
-                            </select>
+                            </select >
                         </p>
                         <p>
                             Current household rent:
@@ -109,8 +111,7 @@
                                 name="inputbox"
                                 value=""
                                 tabindex="0"
-                                oninput="testSelect(this.form)"
-                        >
+                                oninput="testSelect(this.form)" >
                         </p>
                     </div>
                 </div>
