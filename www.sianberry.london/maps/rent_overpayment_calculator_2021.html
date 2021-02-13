@@ -1,146 +1,201 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
+<head>
+    <meta charset="utf-8"/>
     <title>London rent overpayment calculator 2021</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
-    <link rel="stylesheet" href="lib/ol.css" />
+    <link rel="stylesheet" href="lib/ol.css"/>
     <!-- CAN PUT IN A NEW CSS -->
-    <link rel="stylesheet" href="youth_services.css" />
+    <link rel="stylesheet" href="youth_services.css"/>
     <link type="image/vnd.microsoft.icon" href="" rel="shortcut icon">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" media="all" href="over_rent.css">
     <script src="lib/ol.js"></script>
     <script src="youth_services_map.js"></script>
+    <!-- RENT CALCULATOR SCRIPT -->
 
-
-<!-- RENT CALCULATOR SCRIPT -->
-
-<script>
-function testSelect (form) {
+    <script>
+        function testSelect(form) {
 //get year they moved;
-yearraw = form.years.selectedIndex;
+            yearraw = form.years.selectedIndex;
 //get current monthly rent;
-rentraw= form.inputbox.value;
+            rentraw = form.inputbox.value;
 //annual overpaid rent 2012 to 2020;
-var rents = [182,1064,1261, 2798,3507, 2842, 1362, 1546,755];
+            var rents = [182, 1064, 1261, 2798, 3507, 2842, 1362, 1546, 755];
 //cumulative overpaid rent in billions by 2020- starting from 2012;
-var totals= [14.426,14.266,13.317,12.155,9.632,6.21,3.465,2.215,0.727];
+            var totals = [14.426, 14.266, 13.317, 12.155, 9.632, 6.21, 3.465, 2.215, 0.727];
 //average rent if only inflation;
-inflationrent=1576;
+            inflationrent = 1576;
 //weight actual rent vs average rent;
-weight= rentraw/1639;
+            weight = rentraw / 1639;
 //sum the yearly overpay using year they moved;
-var sliceyears = rents.slice(yearraw,);
-var sumyears= sliceyears.reduce(function(a, b) { return a + b; }, 0);
+            var sliceyears = rents.slice(yearraw,);
+            var sumyears = sliceyears.reduce(function (a, b) {
+                return a + b;
+            }, 0);
 //apply weight to overpay;
-overpay=sumyears*weight;
-overpayd= Number(overpay);
+            overpay = sumyears * weight;
+            overpayd = Number(overpay);
 //rent if only inflated x weight;
-currentinflatedrent=inflationrent*weight;
-form.outputboxa.value = Math.round(currentinflatedrent);
-form.outputboxb.value = Math.round(overpayd);
+            currentinflatedrent = inflationrent * weight;
+            form.outputboxa.value = Math.round(currentinflatedrent);
+            form.outputboxb.value = Math.round(overpayd);
 //display stuff;
-form.outputboxc.value = totals[yearraw];
-yearnum=8-yearraw;
-form.outputboxd.value = yearnum;
-form.outputboxe.value = 2012+yearraw;
-}
-</script>
+            form.outputboxc.value = totals[yearraw];
+            yearnum = 8 - yearraw;
+            form.outputboxd.value = yearnum;
+            form.outputboxe.value = 2012 + yearraw;
+        }
+    </script>
+
+
+    <!-- END RENT CALCULATOR SCRIPT -->
+
+    <!-- google analytics script goes here -->
+</head>
+<body>
+
+<!-- THESE HEADER AND FOOTER DIVS ARE HIDDEN WHEN THE PAGE LOADS AND THEN APPEAR AT THE TOP AND BOTTOM OF THE INFO BOX WHEN A FEATURE IS CLICKED - DEFINE A SINGLE HEADER AND FOOTER FOR EACH TYPE OF FEATURE HERE -->
+
+<div id="centre-header"><h2>Youth centre</h2></div>
+<div id="borough-header"><h2>Borough</h2></div>
+<!-- <div id="NEW-header"><h2>Upcoming council site</h2></div> -->
+
+<div id="centre-footer"></div>
+<div id="borough-footer"></div>
+<div id="NEW-footer"></div>
 
 
 
-<!-- END RENT CALCULATOR SCRIPT -->
 
-<!-- google analytics script goes here -->
-  </head>
-  <body>
 
-<!-- THESE HEADER AND FOOTER DIVS ARE HIDDEN WHEN THE PAGE LOADS AND THEN APPEAR AT THE TOP AND BOTTOM OF THE INFO BOX WHEN A FEATURE IS CLICKED - DEFINE A SINGLE HEADER AND FOOTER FOR EACH TYPE OF FEATURE HERE -->  
+<div id="header"><h1>How much have you overpaid your rent?</h1></div>
+<div id="left">
+    <form name="myform" action="" method="GET" class="form-wrapper">
+        <div class="slider">
+            <!-- thanks! https://css-tricks.com/css-only-carousel/ -->
+            <a href="#slide-1" tabindex="0">1</a>
+            <a href="#slide-2" tabindex="0">2</a>
+            <a href="#slide-3" tabindex="0">3</a>
+            <a href="#slide-4" tabindex="0">4</a>
+            <a href="#slide-5" tabindex="0">5</a>
 
-	<div id="centre-header"><h2>Youth centre</h2></div>
-  <div id="borough-header"><h2>Borough</h2></div>
-  <!-- <div id="NEW-header"><h2>Upcoming council site</h2></div> -->
-
-	<div id="centre-footer"></div>
-  <div id="borough-footer"></div>
-  <div id="NEW-footer"></div>
-  
-
-  <!-- END OF HEADER AND FOOTER DEFINITIONS -->
-
-    <div id="footer-main">
-      <div id="footer-inside">
-        
-          <div id="menu">   
-          <div id="menu-right">
-          </div>
-          <div id="menu-left">
+            <div class="slides">
+                <div id="slide-1">
+                    <h2>Like paying rent in London?</h2>
+                    <h3>Let's see how much you are over-paying!</h3>
+                </div>
+                <div id="slide-2">
+                    <div id="rent-calc-form">
+                        <h4>Enter the year you moved to London and your current rent (data starts at 2011)</h4>
+                        <p>
+                            <label for="years">Choose the year you moved to London:</label>
+                            <select name="years" id="years" tabindex="0">
+                                <option value="2">2012</option>
+                                <option value="3">2013</option>
+                                <option value="4">2014</option>
+                                <option value="5">2015</option>
+                                <option value="6">2016</option>
+                                <option value="7">2017</option>
+                                <option value="8">2018</option>
+                                <option value="9">2019</option>
+                                <option value="10">2020</option>
+                            </select>
+                        </p>
+                        <p>
+                            Current household rent:
+                            £<input
+                                type="number"
+                                name="inputbox"
+                                value=""
+                                tabindex="0"
+                                oninput="testSelect(this.form)"
+                        >
+                        </p>
+                    </div>
+                </div>
+                <div id="slide-3">
+                    <div>
+                        <p tabindex="0">If rents had only increased at inflation, you should be paying
+                            £<input type="text"
+                                    id="box1"
+                                    name="outputboxa"
+                                    value="" disabled
+                                    tabindex="0"
+                            > per month
+                        </p>
+                        <p tabindex="0">
+                            You’ve overpaid your landlord
+                            £<input type="text"
+                                    name="outputboxb"
+                                    id="box2"
+                                    tabindex="0"
+                                    value="" disabled> in the past
+                            <input type="text"
+                                   id="box3"
+                                   name="outputboxd"
+                                   tabindex="0"
+                                   value="" disabled> years!
+                        </p>
+                    </div>
+                </div>
+                <div id="slide-4">
+                    <p tabindex="0">
+                        The total overpaid by London renters since
+                        <input type="text"
+                               id="box4"
+                               name="outputboxe"
+                               tabindex="0"
+                               value="" disabled> is £
+                        <input type="text"
+                               name="outputboxc"
+                               id="box4"
+                               tabindex="0"
+                               value="" disabled> billion!
+                    </p>
+                </div>
+                <div id="slide-5">
+                    <p>
+                        If you think rents in London are a disgrace, please sign up for more information
+                    </p>
+                    <p>
+                        <input type="text"
+                               name="emailaddress"
+                               id="emailaddress"
+                               tabindex="0"
+                               value="you@example.com">
+                    </p>
+                </div>
             </div>
-          </div>    
         </div>
-      </div>
+    </form>
+</div>
+<div id="side-panel">
+    <div id="info"></div>
+    <div id="content-window"><span style="margin-left: 8px; margin-right: 8px;"><h2>We can put an advert here</h2></span><a
+            href="https://www.london.gov.uk/sites/default/files/2018_03_20_sb_londons_lost_youth_services_2018_final.pdf"><img src="report_cover_2018_800.jpg"
+                                                                                                                               style="width: 80%;padding-right: 8px; padding-right: 8px;"/></a></div>
+</div>
 
 
-    <div id="header"><h1>How much have you overpaid your rent?</h1></div>
-    <div id="left">
-
-<h4>Enter the year you moved to London and your current rent (data starts at 2011)</h4>
-<p>
-<form name="myform" action="" method="GET">
-<p>
-<label for="years">Choose the year you moved to London:</label> <br>
-<select name="years" id="years">
-  <option value="2">2012</option>
-  <option value="3">2013</option>
-  <option value="4">2014</option>
-  <option value="5">2015</option>
-  <option value="6">2016</option>
-  <option value="7">2017</option>
-  <option value="8">2018</option>
-  <option value="9">2019</option>
-   <option value="10">2020</option>
-</select>
-<br>
-Current household rent: <br><br>
-<input type="number" name="inputbox" value="">
-<br><br>
-<input type="button" name="button" value="Submit" onclick="testSelect(this.form)">
-</p><p>
-<br>
-
- </p><h4>If rents had only increased at inflation, you should be paying <input type="text" id="box1" name="outputboxa" value=""> per month.<br>
-You’ve overpaid your landlords £<input type="text" name="outputboxb" id="box2" value=""> in the past <input type="text" id="box3" name="outputboxd" value=""> years!
-<br>
-The total overpaid by London renters since <input type="text" id="box4" name="outputboxe" value=""> is £<input type="text" name="outputboxc" id="box4" value=""> billion!
-</h4><p>
-</p></form>
-
-    </div>
-	<div id="side-panel">
-		<div id="info"></div>
-    <div id="content-window"><span style="margin-left: 8px; margin-right: 8px;"><h2>We can put an advert here</h2></span><a href="https://www.london.gov.uk/sites/default/files/2018_03_20_sb_londons_lost_youth_services_2018_final.pdf"><img src="report_cover_2018_800.jpg" style="width: 80%;padding-right: 8px; padding-right: 8px;" /></a></div>
-	</div>
+<!-- container footer holds the bottom area of the page with sources of data etc -->
 
 
-  <!-- container footer holds the bottom area of the page with sources of data etc -->
-  
-
-
-          <div id="footer-main">
-      <div id="footer-inside">
-         <div id="footer-middle">
-         <p>We can put what we like here</p>
-         </div>
-          <div id="menu">    
+<div id="footer-main2">
+    <div id="footer-inside2">
+        <div id="footer-middle">
+            <p>We can put what we like here</p>
+        </div>
+        <div id="menu2">
             <ul>
-              <li>AND ANY LINKS AND ACTIONS ETC</li>
-              <li><a href="https://www.london.gov.uk/press-releases/assembly/sian-berry/time-to-save-youth-services-from-the-brink">Latest news at london.gov.uk</a></li>
+                <li>AND ANY LINKS AND ACTIONS ETC</li>
+                <li><a href="https://www.london.gov.uk/press-releases/assembly/sian-berry/time-to-save-youth-services-from-the-brink">Latest news at london.gov.uk</a></li>
             </ul>
-            <br />
-          </div>    
+            <br/>
         </div>
-      </div>
+    </div>
+</div>
 
 
-  </body>
+</body>
 </html>
