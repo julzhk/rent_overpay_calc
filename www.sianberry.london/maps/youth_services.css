@@ -1,0 +1,863 @@
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size:12px;
+	font-weight:400;
+	color: #000000;
+	text-decoration:none
+}
+
+
+/* styles for text, headers, menus  */
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 2em;
+    color: #484d84;
+    font-weight: 600;
+    margin-top: 1.1em;
+    margin-bottom: 0.5em;
+    line-height: 1em;
+}
+
+#info h1 {
+  color: #484d84;
+  margin-top: 0.4em;
+}
+
+h3 {
+    font-size: 1.1em;
+    color: #000;
+    font-weight: 600;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0.5em;
+}
+
+#header {
+    display: block;
+	   width: 100%;
+	 float: left;
+	 vertical-align: top;
+    margin-bottom: 1em;
+	 padding-bottom: 1em;
+	 border-bottom: 1px solid #484d84;
+}	
+
+
+#header h1 {
+   	font-family: "Oswald",sans-serif;	
+	   font-size: 3em;
+     color: #484d84;
+	   font-weight: 600;
+	   margin-top: 0.4em;
+	   margin-bottom: 0.2em;
+     margin-left: 10px;
+}
+
+#header p {
+   	font-family: "Oswald",sans-serif;
+	   font-size: 1.5em;
+	   font-weight: 400;
+	   color: #000;
+	   margin-top: 0.5em;
+}
+
+.empty-info {
+  display: table-cell;
+  height: 100px;
+  text-align: left;
+  vertical-align: top;
+}
+
+#info p {
+  font-size: 1.1em;
+  margin-top: 0em;
+  color: #000;
+}
+
+#info h2 {
+  font-size: 1.3em;
+  line-height: 1.5em;
+  color: #79ac58;
+  font-weight: 600;
+  margin-top: 0px;
+}
+
+#info a {
+  color: #79ac58;
+}
+
+#info td {
+  padding-left: 8px;
+}
+
+#info hr {
+  width: 100%;
+  height: 2px;
+  color: #eee;
+  margin-top: 5px;
+}
+
+#desc p {
+  color: #000;
+  margin-top: 1.8em;
+  font-weight: 500;
+}
+
+.credit {
+  font-size: 1.0em;
+}
+
+/* STYLES FOR MAIN PAGES TEXT */
+
+#main p {
+  font-size: 1.3em;
+  margin-top: 0em;
+}
+
+#main h2 {
+  font-size: 1.6em;
+  color: #79ac58;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+#main h3 {
+  font-size: 1.4em;
+  color: #203b88;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+#main a {
+  color: #cc0066;
+}
+
+
+#main hr {
+  width: 100%;
+  height: 2px;
+  color: #eee;
+  margin-top: 5px;
+}
+
+#main ul {
+  list-style-type: circle;
+  font-size: 1.3em;
+  font-weight: 500;
+
+}
+
+#main ul li {
+  margin-top: 2px;
+}
+
+.box {
+  display: block;
+  float: right;
+  width: 100%;
+  background-color: #cc0066;
+  padding: 10px;
+  margin-left: 10px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.boxwide {
+  display: block;
+  float: right;
+  width: 95%;
+  background-color: #203b88;
+  padding: 10px;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.white {
+  color: #fff;
+}
+
+#main td {
+  font-size: 1.3em;
+  font-weight: 400;
+  text-align: right;
+}
+
+/* STYLES FOR TABLES IN PROBLEMS AND DIG DEEPER PAGE */
+
+#dig tr {
+  height: 380px;
+}
+
+#dig td {
+  width: 25%;
+  text-align: left;
+  vertical-align: top;
+}
+
+#dig h2 {
+  font-size: 1.3em;
+}
+
+#dig p {
+  font-size: 1.1em;
+  line-height: 1.2em;
+  margin-top: 4px;
+  margin-bottom: 0px;
+}
+
+#dig .credit  {
+  font-size: 0.8em;
+  margin-bottom: 15px;
+}
+
+#maintable table {
+  width: 55%;
+  border-collapse: collapse;
+  border: 1px solid #cc0066;
+}
+
+#maintable td {
+  border: 1px solid #cc0066;
+  padding: 4px;
+  font-weight: bold;
+}
+
+
+/* STYLES FOR CHART BARS AND BOXES */
+
+/* Styles for chart rotation in info window - all browsers */
+
+     #info .chart  {
+      transform: rotate(270deg); 
+      -ms-transform: rotate(270deg); 
+      -webkit-transform: rotate(270deg); 
+      -moz-transform-origin: 0 0 0; 
+      transform-origin: 0 0 0; 
+      -ms-transform-origin: 0 0 0;  
+      -webkit-transform-origin: 0 0 0;
+    }
+
+
+.existing {
+  font-weight: bold;
+  background: #1cb78d; 
+  text-align: right;  
+  padding-top: 4px; 
+  padding-bottom: 4px; 
+  padding-right: 4px; 
+  margin-bottom: 3px; 
+  color: #bbb;
+  border: 1px solid #ddd; 
+  border-radius: 3px;
+  vertical-align: top;
+ }
+
+ .planned {
+  font-weight: bold;
+  background: #cc0066; 
+  text-align: right;  
+  padding-top: 4px; 
+  padding-bottom: 4px; 
+  padding-right: 4px; 
+  margin-bottom: 3px; 
+  color: #bbb;
+  border: 1px solid #ddd; 
+  border-radius: 3px;
+  vertical-align: top;
+ }
+
+ .actual {
+  font-weight: bold;
+  background: #003399; 
+  text-align: right;  
+  padding-top: 4px; 
+  padding-bottom: 4px; 
+  padding-right: 4px; 
+  margin-bottom: 3px; 
+  color: #bbb;
+  border: 1px solid #ddd; 
+  border-radius: 3px;
+  vertical-align: top;
+ }
+
+ .chartlabel{
+  font-weight: bold;
+  text-align: right;  
+  padding-top: 4px; 
+  padding-bottom: 4px; 
+  padding-right: 4px; 
+  margin-bottom: 3px; 
+  color: #000;
+  vertical-align: top;
+  margin-left: 20px;
+  width: 30px;
+  margin-top: 5px;
+ }
+
+  .chartlabel1{
+  font-weight: bold;
+  text-align: right;  
+  padding-top: 4px; 
+  padding-bottom: 4px; 
+  padding-right: 4px; 
+  margin-bottom: 3px; 
+  color: #000;
+  vertical-align: top;
+  margin-left: 50px;
+  width: 30px;
+  margin-top: 5px;
+ }
+
+
+/* MOBILE RESPONSIVE STYLES */
+
+/* GENERAL STYLES for map, header and content column and info box layouts */
+
+  .feature-info th {
+    text-align: left;
+    vertical-align: top;
+  }
+
+          /* allow the field values in the info panel to break lines to avoid overflow */
+
+  .feature-info td {
+    word-break: keep-all;
+  }
+
+
+  #info {
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    margin-top: 0px;
+    min-height: 100px;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    padding: 6px;
+    overflow: hidden;
+  }
+
+  #layers {
+    padding: 2px;
+  }
+
+
+
+/* Mobile-only for map, header and content column and info box layouts - goes to single column */
+
+	#map {
+      float: left;
+			vertical-align: top;
+    	height: 70em;
+    	width: 100%;
+	}
+
+  #left {
+    float: left;
+    width: 90%;
+  }
+
+  #left-main {
+    float: left;
+    width: 70%;
+  }
+
+  #middle-main {
+    float: left;
+    width: 28%;
+  }
+
+  #layers {
+    float: left;
+    width: 100%;
+  }
+
+	#side-panel {
+    	display: inline-block;
+    	padding: 0px;
+      float: left;
+			vertical-align: top;
+    	width: 100%;
+  }
+
+  #side-panel-main {
+      display: inline-block;
+      padding: 0px;
+      float: left;
+      vertical-align: top;
+      width: 100%;
+  }
+	
+	#header-left, #header-right {
+			width: 100%;
+			display: block; 
+  }
+
+  #info_top {
+    width: 100%;
+    float: left;
+  }
+
+  #name {
+    width: 100%;
+    float: left;
+  }
+
+  #desc {
+    width: 100%;
+    float: left;
+  }
+
+  #problems {
+    width: 100%;
+    float: left;
+    clear: both;
+  }
+
+  #problems_l {
+    width: 100%;
+    float: left;
+    padding-right: 20px;
+  }
+
+
+  #problems_r {
+    width: 0%;
+    float: left;
+  }
+
+  #key {
+    width: 100%;
+    float: left;
+    margin-bottom: 12px;
+  }
+		
+  #homes {
+    width: 100%;
+    float: left;
+  }
+
+  #h_cou {
+    width: 33%;
+    float: left;
+  }
+
+  #h_int {
+    width: 33%;
+    float: left;
+  }
+
+  #h_pri {
+    width: 33%;
+    float: left;
+  }
+
+  #homes_sum {
+    width: 100%;
+    float: left;
+  }
+
+  #delays {
+    width: 100%;
+    float: left;
+  }
+
+  #info_bottom {
+    width: 100%;
+    float: left;
+  }
+
+  #bottom_l {
+    width: 100%;
+    float: left;
+  }
+
+  #bottom_r {
+    width: 100%;
+    float: left;
+  }
+
+  #image {
+    width: 100%;
+    float: left;
+  }
+
+  #decant {
+    width: 100%;
+    float: left;
+  }
+
+  #costs {
+    width: 33%;
+    float: left;
+  }
+
+  #receipts {
+    width: 33%;
+    float: left;
+  }
+
+  #surplus {
+    width: 33%;
+    float: left;
+  }
+
+  #grants {
+    width: 100%;
+    float: left;
+  }
+
+
+
+/* Larger than mobile and tablet - map and content goes to two columns */
+
+@media (min-width: 900px) {
+
+.box {
+  display: block;
+  float: right;
+  width: 45%;
+  background-color: #cc0066;
+  padding: 10px;
+  margin-left: 10px;
+  color: #fff;
+  font-weight: 600;
+}
+
+  #map {
+      float: left;
+      vertical-align: top;
+      height: 70em;
+      width: 100%;
+  }
+
+  #homes {
+    width: 70%;
+    float: left;
+    margin-bottom: -100px;
+  }
+
+  #homes_sum {
+    width: 30%;
+    float: left;
+  }
+
+  #name {
+    width: 100%;
+    float: left;
+  }
+
+  #name_as {
+    width: 65%;
+    float: left;
+    margin-right: 20px;
+    clear: both;
+  }
+
+  #desc {
+    width: 100%;
+    float: left;
+    padding-left: 0px;
+  }
+
+  #bottom_l {
+    width: 100%;
+    float: left;
+  }
+
+  #bottom_r {
+    width: 28%;
+    float: left;
+  }
+
+  #image {
+    width: 25%;
+    float: left;
+  }
+
+  #left {
+    float: left;
+    width: 75%;
+
+  }
+
+  #left-main {
+    float: left;
+    width: 62%;
+    padding-right: 6px;
+    padding-left: 10px;
+
+  }
+
+  #middle-main {
+    float: left;
+    width: 14%;
+
+  }
+
+  #side-panel-main {
+      float: left;
+      vertical-align: top;
+      padding-left: 6px;
+      padding-right: 4px;
+      width: 20%;
+  }
+
+	#side-panel {
+    	display: inline-block;
+    	padding: 0 5px 0 5px;
+      float: left;
+			vertical-align: top;
+    	width: 23%;
+	}
+		    
+	#header-left, #header-right {
+		width: 30%;
+		display: block; 
+		float: left;
+	}
+
+  #grants {
+    width: 100%;
+    float: left;
+    margin-top: -50px;
+  }
+
+  #info_bottom {
+    width: 100%;
+    float: left;
+  }
+
+
+
+}
+
+/* Mobile for footer columns - footer goes to single column displayed one by one */
+
+	#footer, #footer-home {
+    	display: block;
+    	float: left;
+    	background-color: #484d84;
+    	border-top: 1px solid #666;
+    	width: 100%;
+    	color: #ffffff;
+    	font-size: 1.2em;
+			padding-left: 0.4em;
+			padding-right: 0.4em; 	
+			}
+
+	#footer-inside {
+   		display: block;
+   		float: left;
+   		padding: 0;
+			}
+
+  #footer-main {
+      display: block;
+      float: left;
+      background-color: #484d84;
+      width: 100%;
+      color: #ffffff;
+      font-size: 1.2em;   
+      }
+
+  #menu-left {
+    width: 100%;
+    height: 1.5em;
+    float: left;
+  }
+
+  #menu-right {
+    width: 40%;
+    float: right;
+  }
+	
+
+/* Larger than mobile and tablet - footer goes to three columns */
+
+@media (min-width: 900px) {
+
+	#footer {
+    	display: block;
+    	float: left;
+    	background-color: #484d84;
+    	border-top: 1px solid #666;
+    	width: 100%;
+      position: absolute;
+			vertical-align: bottom;
+			top: 100em;
+    	color: #ffffff;
+    	font-size: 1.2em; 	
+			}
+
+  #footer-main {
+      display: block;
+      float: left;
+      background-color: #484d84;
+      width: 100%;
+      color: #ffffff;
+      font-size: 1.2em;   
+      }
+
+	#footer-home {
+    	display: block;
+    	float: left;
+    	background-color: #484d84;
+    	border-top: 1px solid #666;
+    	width: 100%;
+      position: absolute;
+			vertical-align: bottom;
+			top: 60em;
+    	color: #ffffff;
+    	font-size: 1.2em; 	
+			}
+
+	#footer-inside {
+   		display: block;
+   		width: 100%;
+   		float: left;
+   		padding: 6px;
+			}
+
+
+	#footer-middle {
+   		display: block;
+   		vertical-align: top;
+   		float: left;
+   		margin-top: 0.5em;
+      margin-left: 2em;
+   		width: 97%;
+			}
+
+  #menu-left {
+    width: 77%;
+    float: left;
+    }
+
+  #menu-right {
+    width: 20%;
+    float: right;
+    padding-right: 30px;
+    margin-bottom: -10px;
+    }
+
+
+}
+
+
+
+/* END OF MOBILE RESPONSIVE LAYOUT STYLES */
+
+#content-window {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+}
+
+#content-window a {
+    color: #333;
+}
+
+#content-window ul {
+    padding-left: 0px;
+}
+
+#content-window ul li {
+    list-style-image: url("http://bettertransport.org.uk/sites/all/themes/bettertransport/images/bettertransport-bullet-point_8x8.png");
+    list-style-position: inside;
+    background-position: left 7px;
+    background-repeat: no-repeat;
+    line-height: 1.3em;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+#layers p {
+  font-family: "Oswald",sans-serif;
+    font-size: 1.0em;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: 5px;
+}
+
+
+#footer p, #footer-home p {
+   font-size: 12px;
+   font-weight: 200;
+}
+
+#footer h2, #footer-home h2 {
+   font-family: "Oswald",sans-serif;
+   font-size: 18px;
+   color: #ffffff;
+   font-weight: 300;
+}
+
+#footer h3, #footer-home h3 {
+   font-family: "Oswald",sans-serif;
+   font-size: 13px;
+   color: #ffffff;
+   font-weight: 200;
+}
+
+#footer a {
+    color: #ffffff;
+} 
+
+
+#footer-main a {
+   color: #ffffff;
+}
+
+#footer a:hover {
+     color: #cc0066;
+}
+
+#footer-main a:hover {
+   color: #cc0066;
+}
+
+.map-data {
+   font-size: 9px;
+}
+
+
+#menu ul {
+   margin-top: 0.5em;   
+   margin-bottom: 0.5em;
+   padding-left: 20px;
+}
+
+#menu ul li {
+    font-family: Arial,sans-serif;
+    border-right: solid 2px #ffffff;
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 1.4em;
+    list-style: outside none none;
+    margin-bottom: 0px;
+    padding: 0 6px 0 6px;
+    vertical-align: bottom;
+    display: inline;
+}
+
+#menu ul li a {
+    color: #ffffff;
+}
+
+#menu ul li a:hover {
+    color: #ffffff;
+}
+
+
+
+
