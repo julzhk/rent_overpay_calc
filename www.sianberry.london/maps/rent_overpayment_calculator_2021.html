@@ -82,6 +82,12 @@
                     <h2>Like paying rent in London?</h2>
                     <h3>Let's see how much you are over-paying!</h3>
                     <p> swipe right to start!</p>
+                    <div class="slider">
+                        <!-- thanks! https://css-tricks.com/css-only-carousel/ -->
+                        <a href="#slide-2" tabindex="0">Next</a>
+                    </div>
+                    <!--<span>Photo by <a href="https://unsplash.com/@emily5370?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Emily Wang</a> on <a href="https://unsplash.com/s/photos/housing-london&#45;&#45;street?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>-->
+
                 </div>
                 <div id="slide-2">
                     <div id="rent-calc-form">
@@ -89,9 +95,9 @@
                         <p>
                             <label for="years">Choose the year you moved to London:</label>
                             <select name="years" id="years" tabindex="0"
-                            onclick="testSelect(this.form)"
-                            onmouseup="testSelect(this.form)"
-                            onblur="testSelect(this.form)"
+                                    onclick="testSelect(this.form)"
+                                    onmouseup="testSelect(this.form)"
+                                    onblur="testSelect(this.form)"
                             >
                                 <option value="2">2012</option>
                                 <option value="3">2013</option>
@@ -102,7 +108,7 @@
                                 <option value="8">2018</option>
                                 <option value="9">2019</option>
                                 <option value="10">2020</option>
-                            </select >
+                            </select>
                         </p>
                         <p>
                             Current household rent:
@@ -111,19 +117,24 @@
                                 name="inputbox"
                                 value=""
                                 tabindex="0"
-                                oninput="testSelect(this.form)" >
+                                oninput="testSelect(this.form)">
                         </p>
+                        <div class="slider">
+                            <a href="#slide-3" tabindex="0">Next</a>
+                        </div>
+
                     </div>
                 </div>
                 <div id="slide-3">
                     <div>
-                        <p tabindex="0">If rents had only increased at inflation, you should be paying
+                        <p tabindex="0">
+                            If rents had only increased at inflation, you should be paying
                             £<input type="text"
                                     id="box1"
                                     name="outputboxa"
                                     value="" disabled
                                     tabindex="0"
-                            > per month
+                        > per month
                         </p>
                         <p tabindex="0">
                             You’ve overpaid your landlord
@@ -138,6 +149,9 @@
                                    tabindex="0"
                                    value="" disabled> years!
                         </p>
+                        <div class="slider">
+                            <a href="#slide-4" tabindex="0">Next</a>
+                        </div>
                     </div>
                 </div>
                 <div id="slide-4">
@@ -154,6 +168,10 @@
                                tabindex="0"
                                value="" disabled> billion!
                     </p>
+                    <div class="slider">
+                        <a href="#slide-5" tabindex="0">Next</a>
+                    </div>
+
                 </div>
                 <div id="slide-5">
                     <p>

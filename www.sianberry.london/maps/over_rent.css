@@ -45,7 +45,7 @@
     scroll-snap-align: start;
     flex-shrink: 0;
     width: 600px;
-    height: 600px;
+    height: 400px;
     margin-right: 50px;
     border-radius: 10px;
     background: lightblue;
@@ -103,3 +103,24 @@
     }
 }
 
+.slider #slide-1 {
+    background-image: url('emily-wang-ZnIesKeFODs-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.slider #slide-3  {
+    background-image: url('nick-fewings-SoqG9RWd_FA-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
